@@ -1,9 +1,9 @@
 const fs = require('fs');
-const { Client, LocalAuth } = require('whatsapp-web.js');
+const { Client, LocalAuth, MessageMedia } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const express = require('express');
 const bodyParser = require('body-parser');
-const axios = require('axios'); // Usaremos o axios para enviar dados ao webhook
+const axios = require('axios');
 
 const app = express();
 app.use(bodyParser.json());
@@ -11,6 +11,9 @@ app.use(bodyParser.json());
 // Configuração do cliente com persistência da sessão
 const client = new Client({
     authStrategy: new LocalAuth(), // Salva automaticamente os dados da sessão localmente
+    puppeteer: {
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    },
 });
 
 client.on('qr', (qr) => {
@@ -22,17 +25,16 @@ client.on('ready', () => {
     console.log('WhatsApp está pronto!');
 });
 
-// Configuração da URL do webhook para onde as mensagens serão enviadas
+// Configuração das URLs dos webhooks para envio de mensagens recebidas
 const webhookUrls = [
     'https://primeflix.app.n8n.cloud/webhook-test/ai/tbest/luiza/a545649b-4c7d-449c-b75a-038c9b456347',
-    'https://primeflix.app.n8n.cloud/webhook/ai/tbest/luiza/a545649b-4c7d-449c-b75a-038c9b456347'
+    'https://primeflix.app.n8n.cloud/webhook/ai/tbest/luiza/a545649b-4c7d-449c-b75a-038c9b456347',
 ];
 
 // Processamento de mensagens recebidas
 client.on('message', async (message) => {
     console.log(`Mensagem recebida de ${message.from}: ${message.body}`);
 
-    // Dados da mensagem a serem enviados para o webhook
     const messageData = {
         from: message.from.replace('@c.us', ''), // Remove o sufixo
         body: message.body, // Texto da mensagem
@@ -41,14 +43,13 @@ client.on('message', async (message) => {
         id: message.id.id, // ID da mensagem
     };
 
-    // Enviar os dados para todas as URLs no array webhookUrls
-    try {
-        for (let webhookUrl of webhookUrls) {
+    for (let webhookUrl of webhookUrls) {
+        try {
             await axios.post(webhookUrl, messageData);
             console.log(`Mensagem enviada ao webhook ${webhookUrl} com sucesso!`);
+        } catch (error) {
+            console.error(`Erro ao enviar mensagem para ${webhookUrl}:`, error.message);
         }
-    } catch (error) {
-        console.error('Erro ao enviar mensagem ao webhook:', error.message);
     }
 });
 
@@ -56,11 +57,16 @@ client.on('message', async (message) => {
 app.post('/send-message', async (req, res) => {
     const { phone, message } = req.body;
 
+    if (!client.info) {
+        return res.status(500).send({ error: 'WhatsApp não está pronto.' });
+    }
+
     try {
         const formattedPhone = `${phone}@c.us`; // Adiciona o sufixo internamente
         await client.sendMessage(formattedPhone, message);
         res.status(200).send({ status: 'Mensagem de texto enviada!' });
     } catch (error) {
+        console.error('Erro ao enviar mensagem:', error.message);
         res.status(500).send({ error: error.message });
     }
 });
@@ -69,25 +75,29 @@ app.post('/send-message', async (req, res) => {
 app.post('/send-media', async (req, res) => {
     const { phone, type, mediaPath, caption } = req.body;
 
+    if (!client.info) {
+        return res.status(500).send({ error: 'WhatsApp não está pronto.' });
+    }
+
     try {
         const formattedPhone = `${phone}@c.us`; // Adiciona o sufixo internamente
 
         let media;
         switch (type) {
             case 'image':
-                media = await client.prepareMessageMedia(fs.readFileSync(mediaPath), 'image/jpeg');
+                media = MessageMedia.fromFilePath(mediaPath);
                 await client.sendMessage(formattedPhone, media, { caption });
                 break;
             case 'audio':
-                media = await client.prepareMessageMedia(fs.readFileSync(mediaPath), 'audio/mp3');
+                media = MessageMedia.fromFilePath(mediaPath);
                 await client.sendMessage(formattedPhone, media);
                 break;
             case 'video':
-                media = await client.prepareMessageMedia(fs.readFileSync(mediaPath), 'video/mp4');
+                media = MessageMedia.fromFilePath(mediaPath);
                 await client.sendMessage(formattedPhone, media, { caption });
                 break;
             case 'file':
-                media = await client.prepareMessageMedia(fs.readFileSync(mediaPath), 'application/pdf');
+                media = MessageMedia.fromFilePath(mediaPath);
                 await client.sendMessage(formattedPhone, media, { caption });
                 break;
             default:
@@ -96,6 +106,7 @@ app.post('/send-media', async (req, res) => {
 
         res.status(200).send({ status: `Mídia de tipo ${type} enviada!` });
     } catch (error) {
+        console.error('Erro ao enviar mídia:', error.message);
         res.status(500).send({ error: error.message });
     }
 });

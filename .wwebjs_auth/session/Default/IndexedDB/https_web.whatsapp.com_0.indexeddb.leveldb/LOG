@@ -1,4 +1,24 @@
-2024/12/15-18:38:02.327 2a3c Reusing MANIFEST C:\Users\acer\api-webhook\api-01\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2024/12/15-18:38:02.328 2a3c Recovering log #125
-2024/12/15-18:38:02.396 2a3c Reusing old log C:\Users\acer\api-webhook\api-01\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000125.log 
-2024/12/15-18:38:02.398 2a3c Delete type=2 #124
+2024/12/15-18:51:17.694 3c38 Reusing MANIFEST C:\Users\acer\api-webhook\api-01\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/12/15-18:51:17.695 3c38 Recovering log #125
+2024/12/15-18:51:17.742 3c38 Reusing old log C:\Users\acer\api-webhook\api-01\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000125.log 
+2024/12/15-18:51:22.786 3c38 Level-0 table #130: started
+2024/12/15-18:51:22.795 3c38 Level-0 table #130: 111488 bytes OK
+2024/12/15-18:51:22.797 3c38 Delete type=0 #125
+2024/12/15-18:51:22.803 3c38 Manual compaction at level-0 from '\x006\x00\x00\x00' @ 72057594037927935 : 1 .. '\x007\x00\x00\x00' @ 0 : 0; will stop at '\x007\x00\x00\x05' @ 110932 : 1
+2024/12/15-18:51:22.803 3c38 Compacting 1@0 + 1@1 files
+2024/12/15-18:51:22.960 3c38 Generated table #131@0: 58129 keys, 1263488 bytes
+2024/12/15-18:51:22.961 3c38 Compacted 1@0 + 1@1 files => 1263488 bytes
+2024/12/15-18:51:22.962 3c38 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/12/15-18:51:22.962 3c38 Delete type=2 #130
+2024/12/15-18:51:22.963 3c38 Manual compaction at level-0 from '\x007\x00\x00\x05' @ 110932 : 1 .. '\x007\x00\x00\x00' @ 0 : 0; will stop at (end)
+2024/12/15-18:51:22.964 43e8 Level-0 table #133: started
+2024/12/15-18:51:22.977 43e8 Level-0 table #133: 248 bytes OK
+2024/12/15-18:51:22.979 43e8 Delete type=2 #127
+2024/12/15-18:51:22.979 43e8 Delete type=0 #129
+2024/12/15-18:51:22.980 43e8 Manual compaction at level-0 from '\x007\x00\x00\x00' @ 72057594037927935 : 1 .. '\x008\x00\x00\x00' @ 0 : 0; will stop at '\x007\x00\x00\x05' @ 110965 : 0
+2024/12/15-18:51:22.980 43e8 Compacting 1@0 + 1@1 files
+2024/12/15-18:51:23.098 43e8 Generated table #134@0: 58127 keys, 1263393 bytes
+2024/12/15-18:51:23.098 43e8 Compacted 1@0 + 1@1 files => 1263393 bytes
+2024/12/15-18:51:23.100 43e8 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/12/15-18:51:23.100 43e8 Delete type=2 #133
+2024/12/15-18:51:23.101 43e8 Manual compaction at level-0 from '\x007\x00\x00\x05' @ 110965 : 0 .. '\x008\x00\x00\x00' @ 0 : 0; will stop at (end)

@@ -1,26 +1,4 @@
-2024/12/15-18:37:26.681 cd0 Reusing MANIFEST C:\Users\acer\api-webhook\api-01\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2024/12/15-18:37:26.682 cd0 Recovering log #118
-2024/12/15-18:37:26.938 cd0 Reusing old log C:\Users\acer\api-webhook\api-01\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000118.log 
-2024/12/15-18:37:26.938 cd0 Delete type=2 #117
-2024/12/15-18:37:26.938 cd0 Delete type=2 #119
-2024/12/15-18:37:31.561 3570 Level-0 table #123: started
-2024/12/15-18:37:31.637 3570 Level-0 table #123: 1081738 bytes OK
-2024/12/15-18:37:31.639 3570 Delete type=0 #118
-2024/12/15-18:37:31.640 3570 Manual compaction at level-0 from '\x004\x00\x00\x00' @ 72057594037927935 : 1 .. '\x005\x00\x00\x00' @ 0 : 0; will stop at '\x005\x00\x00\x05' @ 105605 : 1
-2024/12/15-18:37:31.640 3570 Compacting 1@0 + 1@1 files
-2024/12/15-18:37:31.784 3570 Generated table #124@0: 55658 keys, 1219043 bytes
-2024/12/15-18:37:31.784 3570 Compacted 1@0 + 1@1 files => 1219043 bytes
-2024/12/15-18:37:31.785 3570 compacted to: files[ 0 1 1 0 0 0 0 ]
-2024/12/15-18:37:31.786 3570 Delete type=2 #123
-2024/12/15-18:37:31.786 3570 Manual compaction at level-0 from '\x005\x00\x00\x05' @ 105605 : 1 .. '\x005\x00\x00\x00' @ 0 : 0; will stop at (end)
-2024/12/15-18:37:31.788 2cd8 Level-0 table #126: started
-2024/12/15-18:37:31.804 2cd8 Level-0 table #126: 248 bytes OK
-2024/12/15-18:37:31.806 2cd8 Delete type=2 #120
-2024/12/15-18:37:31.806 2cd8 Delete type=0 #122
-2024/12/15-18:37:31.806 2cd8 Manual compaction at level-0 from '\x005\x00\x00\x00' @ 72057594037927935 : 1 .. '\x006\x00\x00\x00' @ 0 : 0; will stop at '\x005\x00\x00\x05' @ 105638 : 0
-2024/12/15-18:37:31.806 2cd8 Compacting 1@0 + 1@1 files
-2024/12/15-18:37:31.914 2cd8 Generated table #127@0: 55656 keys, 1219130 bytes
-2024/12/15-18:37:31.914 2cd8 Compacted 1@0 + 1@1 files => 1219130 bytes
-2024/12/15-18:37:31.915 2cd8 compacted to: files[ 0 1 1 0 0 0 0 ]
-2024/12/15-18:37:31.916 2cd8 Delete type=2 #126
-2024/12/15-18:37:31.916 2cd8 Manual compaction at level-0 from '\x005\x00\x00\x05' @ 105638 : 0 .. '\x006\x00\x00\x00' @ 0 : 0; will stop at (end)
+2024/12/15-18:38:02.327 2a3c Reusing MANIFEST C:\Users\acer\api-webhook\api-01\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/12/15-18:38:02.328 2a3c Recovering log #125
+2024/12/15-18:38:02.396 2a3c Reusing old log C:\Users\acer\api-webhook\api-01\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000125.log 
+2024/12/15-18:38:02.398 2a3c Delete type=2 #124

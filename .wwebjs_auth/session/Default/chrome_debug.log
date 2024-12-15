@@ -1,11 +1,22 @@
-[1215/183802.262:INFO:CONSOLE(155)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/y0/r/V7lIez1cXm9.js (155)
-[1215/183802.651:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Feature xr-spatial-tracking's parameters are ignored.", source:  (0)
-[1215/183802.652:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'attribution-reporting'.", source:  (0)
-[1215/183802.652:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'compute-pressure'.", source:  (0)
-[1215/183802.653:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.", source:  (0)
-[1215/183802.653:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'private-state-token-issuance'.", source:  (0)
-[1215/183802.654:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'shared-storage'.", source:  (0)
-[1215/183802.654:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'shared-storage-select-url'.", source:  (0)
-[1215/183802.654:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'private-state-token-redemption'.", source:  (0)
-[1215/183802.655:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'unload'.", source:  (0)
-[1215/183802.655:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'window-management'.", source:  (0)
+[1215/185117.643:INFO:CONSOLE(155)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/y0/r/V7lIez1cXm9.js (155)
+[1215/185120.311:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Feature xr-spatial-tracking's parameters are ignored.", source:  (0)
+[1215/185120.311:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'attribution-reporting'.", source:  (0)
+[1215/185120.312:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'compute-pressure'.", source:  (0)
+[1215/185120.312:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.", source:  (0)
+[1215/185120.312:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'private-state-token-issuance'.", source:  (0)
+[1215/185120.313:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'shared-storage'.", source:  (0)
+[1215/185120.313:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'shared-storage-select-url'.", source:  (0)
+[1215/185120.313:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'private-state-token-redemption'.", source:  (0)
+[1215/185120.313:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'unload'.", source:  (0)
+[1215/185120.313:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'window-management'.", source:  (0)
+[1215/185120.326:WARNING:backend_impl.cc(1816)] Destroying invalid entry.
+[1215/185120.327:WARNING:backend_impl.cc(1816)] Destroying invalid entry.
+[1215/185120.332:WARNING:backend_impl.cc(1816)] Destroying invalid entry.
+[1215/185120.333:WARNING:backend_impl.cc(1816)] Destroying invalid entry.
+[1215/185120.336:WARNING:backend_impl.cc(1816)] Destroying invalid entry.
+[1215/185120.338:WARNING:backend_impl.cc(1816)] Destroying invalid entry.
+[1215/185120.340:WARNING:backend_impl.cc(1816)] Destroying invalid entry.
+[1215/185120.341:WARNING:backend_impl.cc(1816)] Destroying invalid entry.
+[1215/185120.343:WARNING:backend_impl.cc(1816)] Destroying invalid entry.
+[1215/185120.380:WARNING:backend_impl.cc(1816)] Destroying invalid entry.
+[1215/185123.182:INFO:CONSOLE(155)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/y0/r/V7lIez1cXm9.js (155)

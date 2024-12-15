@@ -62,7 +62,7 @@ app.post('/send-message', async (req, res) => {
     }
 
     try {
-        const formattedPhone = `${phone}@c.us`; // Adiciona o sufixo internamente
+        const formattedPhone = `${555194019730}@c.us`; // Adiciona o sufixo internamente
         await client.sendMessage(formattedPhone, message);
         res.status(200).send({ status: 'Mensagem de texto enviada!' });
     } catch (error) {
